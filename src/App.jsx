@@ -4,6 +4,7 @@ import Hero from "./sections/Hero.jsx";
 import TrustedBy from "./sections/TrustedBy.jsx";
 import WeAre from "./sections/WeAre.jsx";
 import Solutions from "./sections/Solutions.jsx";
+import Values from "./sections/Values.jsx";
 
 const App = () => (
   <SiteDataProvider>
@@ -13,6 +14,7 @@ const App = () => (
       <TrustedBy />
       <WeAre />
       <Solutions />
+      <Values />
     </main>
   </SiteDataProvider>
 );
