@@ -6,6 +6,7 @@ import WeAre from "./sections/WeAre.jsx";
 import Solutions from "./sections/Solutions.jsx";
 import Values from "./sections/Values.jsx";
 import Showcase from "./sections/Showcase.jsx";
+import TechStack from "./sections/TechStack.jsx";
 
 const App = () => (
   <SiteDataProvider>
@@ -17,6 +18,7 @@ const App = () => (
       <Solutions />
       <Values />
       <Showcase />
+      <TechStack />
     </main>
   </SiteDataProvider>
 );

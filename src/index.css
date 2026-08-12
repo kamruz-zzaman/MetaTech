@@ -25,6 +25,44 @@ body {
   display: none;
 }
 
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-track {
+  animation: marquee-left 32s linear infinite;
+}
+
+.marquee-track-reverse {
+  animation: marquee-right 32s linear infinite;
+}
+
+.marquee-row:hover .marquee-track,
+.marquee-row:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .marquee-track-reverse {
+    animation: none;
+  }
+}
+
 
 @media (min-width: 768px) {
   .hero-notch-mask {
