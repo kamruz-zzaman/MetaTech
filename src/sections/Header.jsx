@@ -40,7 +40,7 @@ export default function Header() {
   const { nav } = data;
 
   return (
-    <header className="bg-brand-dark px-2.5 py-2.5 md:p-5">
+    <header className="relative z-30 bg-brand-dark px-2.5 py-2.5 md:p-5">
       <Container className="flex items-center justify-between rounded-[5px] bg-white/25 p-4 md:rounded-[25px] md:px-5 md:py-3.75">
         <div className="flex flex-1 items-center justify-between gap-6 md:flex-initial md:justify-start md:gap-16 lg:gap-[105px]">
           <img src={logo} alt={nav.logo} className="h-5 w-auto md:h-[24.57px]" />
@@ -74,7 +74,11 @@ export default function Header() {
         </a>
       </Container>
       {menuOpen && (
-        <nav id={menuId} aria-label="Primary" className="mt-2.5 flex flex-col gap-4 rounded-[5px] bg-white/25 p-4 md:hidden">
+        <nav
+          id={menuId}
+          aria-label="Primary"
+          className="absolute inset-x-0 top-full mt-2.5 flex flex-col gap-4 rounded-[5px] bg-white/25 p-4 shadow-lg shadow-black/40 backdrop-blur-sm md:hidden"
+        >
           {nav.links.map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`} className="font-body text-sm font-bold text-white">
               {link}
