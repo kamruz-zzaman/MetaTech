@@ -7,6 +7,7 @@ import Solutions from "./sections/Solutions.jsx";
 import Values from "./sections/Values.jsx";
 import Showcase from "./sections/Showcase.jsx";
 import TechStack from "./sections/TechStack.jsx";
+import Footer from "./sections/Footer.jsx";
 
 const App = () => (
   <SiteDataProvider>
@@ -20,6 +21,7 @@ const App = () => (
       <Showcase />
       <TechStack />
     </main>
+    <Footer />
   </SiteDataProvider>
 );
 
