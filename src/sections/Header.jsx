@@ -57,7 +57,7 @@ export default function Header() {
           </nav>
           <button
             type="button"
-            className="text-white md:hidden"
+            className="cursor-pointer text-white md:hidden"
             aria-expanded={menuOpen}
             aria-controls={menuId}
             onClick={() => setMenuOpen((open) => !open)}
