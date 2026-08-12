@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchSection } from "../api/client.js";
+import { fetchSection } from "@/api/client.js";
 import { SiteDataContext } from "./siteDataContext.js";
 
 const SECTION_KEYS = [

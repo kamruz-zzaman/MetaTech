@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Container from "../components/Container.jsx";
-import LoadingState from "../components/LoadingState.jsx";
-import ErrorState from "../components/ErrorState.jsx";
-import { useSection } from "../hooks/useSection.js";
-import showcaseBanner from "../assets/showcase-banner.png";
+import Container from "@/components/Container.jsx";
+import LoadingState from "@/components/LoadingState.jsx";
+import ErrorState from "@/components/ErrorState.jsx";
+import { useSection } from "@/hooks/useSection.js";
+import showcaseBanner from "@/assets/showcase-banner.webp";
 
 const AUTO_SLIDE_INTERVAL_MS = 5000;
 
@@ -44,9 +44,9 @@ export default function Showcase() {
       <Container className="flex flex-col gap-10 px-4 py-12 md:flex-row md:items-center md:gap-8 md:px-5 md:py-20">
         <div className="flex flex-col items-start gap-5 md:flex-1">
           <p className="font-body text-lg font-extrabold text-white">{brand}</p>
-          <h3 className="font-display text-3xl leading-tight font-extrabold text-white md:text-[42px] md:leading-[1.15]">
+          <h2 className="font-display text-3xl leading-tight font-extrabold text-white md:text-[42px] md:leading-[1.15]">
             {heading}
-          </h3>
+          </h2>
           <p className="font-body text-sm text-white/90 md:text-base">{description}</p>
           <a
             href="#contact"
@@ -67,6 +67,7 @@ export default function Showcase() {
                   src={showcaseBanner}
                   alt={index === 0 ? `${brand} product screenshot` : ""}
                   aria-hidden={index !== 0}
+                  loading="lazy"
                   className="w-full shrink-0"
                 />
               ))}

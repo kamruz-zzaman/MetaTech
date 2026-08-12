@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Container from "../components/Container.jsx";
-import LoadingState from "../components/LoadingState.jsx";
-import ErrorState from "../components/ErrorState.jsx";
-import { useSection } from "../hooks/useSection.js";
+import Container from "@/components/Container.jsx";
+import LoadingState from "@/components/LoadingState.jsx";
+import ErrorState from "@/components/ErrorState.jsx";
+import { useSection } from "@/hooks/useSection.js";
 
 export default function Solutions() {
   const { status, data, error } = useSection("solutions");
@@ -56,9 +56,9 @@ export default function Solutions() {
           </span>
           <div className="flex flex-col items-start gap-5 md:max-w-153">
             <div className="flex flex-col items-start gap-5">
-              <h3 className="font-display text-2xl font-extrabold tracking-[-0.8px] text-ink md:text-[32px] md:tracking-[-1.6px]">
+              <h2 className="font-display text-2xl font-extrabold tracking-[-0.8px] text-ink md:text-[32px] md:tracking-[-1.6px]">
                 {activeTab.heading}
-              </h3>
+              </h2>
               <p className="font-body text-base leading-6.75 tracking-[-0.35px] text-ink md:text-lg md:tracking-[-0.54px]">
                 {activeTab.description}
               </p>

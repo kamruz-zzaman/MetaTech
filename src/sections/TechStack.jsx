@@ -1,25 +1,25 @@
-import Container from "../components/Container.jsx";
-import LoadingState from "../components/LoadingState.jsx";
-import ErrorState from "../components/ErrorState.jsx";
-import { useSection } from "../hooks/useSection.js";
-import react from "../assets/logos/techstacks/react.png";
-import nextjs from "../assets/logos/techstacks/nextjs.png";
-import tailwindcss from "../assets/logos/techstacks/tailwindcss.png";
-import typescript from "../assets/logos/techstacks/typescript.png";
-import angular from "../assets/logos/techstacks/angular.png";
-import vuejs from "../assets/logos/techstacks/vuejs.png";
-import go from "../assets/logos/techstacks/go.png";
-import python from "../assets/logos/techstacks/python.png";
-import nodejs from "../assets/logos/techstacks/nodejs.png";
-import dotnet from "../assets/logos/techstacks/dotnet.png";
-import ruby from "../assets/logos/techstacks/ruby.png";
-import php from "../assets/logos/techstacks/php.png";
-import django from "../assets/logos/techstacks/django.png";
-import laravel from "../assets/logos/techstacks/laravel.png";
-import flutter from "../assets/logos/techstacks/flutter.png";
-import mysql from "../assets/logos/techstacks/mysql.png";
-import mongodb from "../assets/logos/techstacks/mongobd.png";
-import html from "../assets/logos/techstacks/html.png";
+import Container from "@/components/Container.jsx";
+import LoadingState from "@/components/LoadingState.jsx";
+import ErrorState from "@/components/ErrorState.jsx";
+import { useSection } from "@/hooks/useSection.js";
+import react from "@/assets/logos/techstacks/react.png";
+import nextjs from "@/assets/logos/techstacks/nextjs.png";
+import tailwindcss from "@/assets/logos/techstacks/tailwindcss.png";
+import typescript from "@/assets/logos/techstacks/typescript.png";
+import angular from "@/assets/logos/techstacks/angular.png";
+import vuejs from "@/assets/logos/techstacks/vuejs.png";
+import go from "@/assets/logos/techstacks/go.png";
+import python from "@/assets/logos/techstacks/python.png";
+import nodejs from "@/assets/logos/techstacks/nodejs.png";
+import dotnet from "@/assets/logos/techstacks/dotnet.png";
+import ruby from "@/assets/logos/techstacks/ruby.png";
+import php from "@/assets/logos/techstacks/php.png";
+import django from "@/assets/logos/techstacks/django.png";
+import laravel from "@/assets/logos/techstacks/laravel.png";
+import flutter from "@/assets/logos/techstacks/flutter.png";
+import mysql from "@/assets/logos/techstacks/mysql.png";
+import mongodb from "@/assets/logos/techstacks/mongobd.png";
+import html from "@/assets/logos/techstacks/html.png";
 
 const ICON_ASSETS = {
   React: react,
@@ -54,7 +54,12 @@ function MarqueeRow({ items, reverse }) {
             key={`${name}-${index}`}
             className="flex h-25 w-40 shrink-0 items-center justify-center rounded-2xl border border-border-subtle bg-surface px-6 sm:w-50"
           >
-            <img src={ICON_ASSETS[name]} alt={name} className="max-h-10 max-w-full object-contain" />
+            <img
+              src={ICON_ASSETS[name]}
+              alt={name}
+              loading="lazy"
+              className="max-h-10 max-w-full object-contain"
+            />
           </div>
         ))}
       </div>

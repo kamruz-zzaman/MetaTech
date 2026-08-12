@@ -1,8 +1,8 @@
-import Container from "../components/Container.jsx";
-import HighlightedText from "../components/HighlightedText.jsx";
-import LoadingState from "../components/LoadingState.jsx";
-import ErrorState from "../components/ErrorState.jsx";
-import { useSection } from "../hooks/useSection.js";
+import Container from "@/components/Container.jsx";
+import HighlightedText from "@/components/HighlightedText.jsx";
+import LoadingState from "@/components/LoadingState.jsx";
+import ErrorState from "@/components/ErrorState.jsx";
+import { useSection } from "@/hooks/useSection.js";
 
 export default function Footer() {
   const { status, data, error } = useSection("footer");

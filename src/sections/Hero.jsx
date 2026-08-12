@@ -1,12 +1,12 @@
-import Container from "../components/Container.jsx";
-import HighlightedText from "../components/HighlightedText.jsx";
-import LoadingState from "../components/LoadingState.jsx";
-import ErrorState from "../components/ErrorState.jsx";
-import { useSection } from "../hooks/useSection.js";
-import heroPhoto from "../assets/hero-photo.png";
-import watermark from "../assets/hero-metatech-watermark.svg";
-import playIcon from "../assets/hero-play-icon.svg";
-import heroNotchBorder from "../assets/hero-subtract.svg";
+import Container from "@/components/Container.jsx";
+import HighlightedText from "@/components/HighlightedText.jsx";
+import LoadingState from "@/components/LoadingState.jsx";
+import ErrorState from "@/components/ErrorState.jsx";
+import { useSection } from "@/hooks/useSection.js";
+import heroPhoto from "@/assets/hero-photo.webp";
+import watermark from "@/assets/hero-metatech-watermark.svg";
+import playIcon from "@/assets/hero-play-icon.svg";
+import heroNotchBorder from "@/assets/hero-subtract.svg";
 
 function PlayButton({ className = "" }) {
   return (
@@ -68,7 +68,13 @@ export default function Hero() {
       <Container className="px-4 md:px-5">
         <div className="relative">
           <div className="hero-notch-mask relative aspect-380/200 w-full overflow-hidden rounded-[25px] md:aspect-1400/571 md:overflow-visible md:rounded-none">
-            <img src={heroPhoto} alt="" className="absolute inset-0 size-full object-cover" />
+            <img
+              src={heroPhoto}
+              alt=""
+              loading="eager"
+              fetchPriority="high"
+              className="absolute inset-0 size-full object-cover"
+            />
             <img
               src={watermark}
               alt=""

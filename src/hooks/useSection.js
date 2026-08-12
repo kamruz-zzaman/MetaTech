@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { SiteDataContext } from "../context/siteDataContext.js";
+import { SiteDataContext } from "@/context/siteDataContext.js";
 
 export function useSection(key) {
   const sections = useContext(SiteDataContext);

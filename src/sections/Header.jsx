@@ -1,10 +1,10 @@
 import { useId, useState } from "react";
-import Container from "../components/Container.jsx";
-import LoadingState from "../components/LoadingState.jsx";
-import ErrorState from "../components/ErrorState.jsx";
-import { useSection } from "../hooks/useSection.js";
-import logo from "../assets/metatech-logo.svg";
-import menuIcon from "../assets/menu-icon.svg";
+import Container from "@/components/Container.jsx";
+import LoadingState from "@/components/LoadingState.jsx";
+import ErrorState from "@/components/ErrorState.jsx";
+import { useSection } from "@/hooks/useSection.js";
+import logo from "@/assets/metatech-logo.svg";
+import menuIcon from "@/assets/menu-icon.svg";
 
 function MenuIcon({ open }) {
   return open ? (

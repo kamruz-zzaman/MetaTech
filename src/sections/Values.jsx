@@ -1,7 +1,7 @@
-import Container from "../components/Container.jsx";
-import LoadingState from "../components/LoadingState.jsx";
-import ErrorState from "../components/ErrorState.jsx";
-import { useSection } from "../hooks/useSection.js";
+import Container from "@/components/Container.jsx";
+import LoadingState from "@/components/LoadingState.jsx";
+import ErrorState from "@/components/ErrorState.jsx";
+import { useSection } from "@/hooks/useSection.js";
 
 export default function Values() {
   const { status, data, error } = useSection("values");
@@ -32,9 +32,9 @@ export default function Values() {
             key={card.title}
             className="flex min-h-98.5 flex-col justify-between rounded-[25px] border border-white/10 bg-ink p-6 md:h-112.5 md:items-center md:justify-center md:border-border-subtle md:bg-white md:p-10"
           >
-            <h3 className="font-display text-3xl font-extrabold text-brand-green md:text-center md:text-[36px] md:text-ink">
+            <h2 className="font-display text-3xl font-extrabold text-brand-green md:text-center md:text-[36px] md:text-ink">
               {card.title}
-            </h3>
+            </h2>
             <p className="font-body text-base text-white md:hidden">{card.description}</p>
           </div>
         ))}
