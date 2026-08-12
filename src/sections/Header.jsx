@@ -4,16 +4,15 @@ import LoadingState from "../components/LoadingState.jsx";
 import ErrorState from "../components/ErrorState.jsx";
 import { useSection } from "../hooks/useSection.js";
 import logo from "../assets/metatech-logo.svg";
+import menuIcon from "../assets/menu-icon.svg";
 
 function MenuIcon({ open }) {
   return open ? (
-    <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
       <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
     </svg>
   ) : (
-    <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
-    </svg>
+    <img src={menuIcon} alt="" className="size-6" aria-hidden="true" />
   );
 }
 
@@ -41,10 +40,10 @@ export default function Header() {
   const { nav } = data;
 
   return (
-    <header className="bg-brand-dark px-4 py-4 md:p-5">
-      <Container className="flex items-center justify-between md:rounded-[25px] md:bg-white/25 md:px-5 md:py-[15px]">
+    <header className="bg-brand-dark px-2.5 py-2.5 md:p-5">
+      <Container className="flex items-center justify-between rounded-[5px] bg-white/25 p-4 md:rounded-[25px] md:px-5 md:py-3.75">
         <div className="flex flex-1 items-center justify-between gap-6 md:flex-initial md:justify-start md:gap-16 lg:gap-[105px]">
-          <img src={logo} alt={nav.logo} className="h-6 w-auto md:h-[24.57px]" />
+          <img src={logo} alt={nav.logo} className="h-5 w-auto md:h-[24.57px]" />
           <nav className="hidden items-center gap-[25px] md:flex" aria-label="Primary">
             {nav.links.map((link) => (
               <a
@@ -75,7 +74,7 @@ export default function Header() {
         </a>
       </Container>
       {menuOpen && (
-        <nav id={menuId} aria-label="Primary" className="mt-3 flex flex-col gap-4 rounded-2xl bg-white/10 p-4 md:hidden">
+        <nav id={menuId} aria-label="Primary" className="mt-2.5 flex flex-col gap-4 rounded-[5px] bg-white/25 p-4 md:hidden">
           {nav.links.map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`} className="font-body text-sm font-bold text-white">
               {link}
