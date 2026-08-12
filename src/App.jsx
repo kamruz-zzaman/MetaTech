@@ -5,6 +5,7 @@ import TrustedBy from "./sections/TrustedBy.jsx";
 import WeAre from "./sections/WeAre.jsx";
 import Solutions from "./sections/Solutions.jsx";
 import Values from "./sections/Values.jsx";
+import Showcase from "./sections/Showcase.jsx";
 
 const App = () => (
   <SiteDataProvider>
@@ -15,6 +16,7 @@ const App = () => (
       <WeAre />
       <Solutions />
       <Values />
+      <Showcase />
     </main>
   </SiteDataProvider>
 );
